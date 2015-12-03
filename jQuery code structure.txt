@@ -1,13 +1,30 @@
-$(document).ready(function() {
-    $('thingToTouch').event(function() {
-        $('thingToAffect').effect();
-    });
-});
+
+
+
+
+$(document).ready(function() {											function = action
+    $('thingToTouch').event(function() {      <---- thing to Touch = html element clicked on
+        $('thingToAffect').effect();								thing to Affect = html element undergoing transformation
+    });																									i.e. fades, changes size
+});																										t.to.Touch and t.to.Affect can be the same
+																												same = i.e. hovering over a div to change it's opacity
+																												different = i.e. click button id to resize a div
+
+
 
 example of this:
 
 $(document).ready(function() {
     $('#button').click(function() {
-        $('thingToAffect').effect();    <---- can store outcome in variable. 
+        $('thingToAffect').effect();    <---- can store outcome in variable (typically with .val())
     });
+});
+
+
+
+
+If you want an effect to occur as soon as page loads, simply remove second line:
+
+$(document).ready(function() {
+    $('thingToAffect').effect();
 });
