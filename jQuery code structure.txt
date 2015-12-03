@@ -1,0 +1,13 @@
+$(document).ready(function() {
+    $('thingToTouch').event(function() {
+        $('thingToAffect').effect();
+    });
+});
+
+example of this:
+
+$(document).ready(function() {
+    $('#button').click(function() {
+        $('thingToAffect').effect();    <---- can store outcome in variable. 
+    });
+});
